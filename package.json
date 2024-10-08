@@ -1,0 +1,25 @@
+{
+  "name": "aa-passkey",
+  "description": "aa-passkey is used to create and use EIP-4337 account with passkey to interactive with the Ethereum world.",
+  "version": "0.0.4",
+  "bin": "./cli",
+  "file": [
+    "cli"
+  ],
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "bun build ./cli.ts --compile --outfile cli",
+    "pub": "npm run prepublish && npm publish --access public"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
